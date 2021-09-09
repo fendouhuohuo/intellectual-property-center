@@ -1,8 +1,8 @@
 import service from '@/utils/request'
 
-export function getOrder(page,query) {               // 需求列表页,data是查询条件的请求体内容
+export function getOrder(category,page,query) {               // 需求列表页,data是查询条件的请求体内容
   return service({
-    url: `/stcsp/order/admin/list/${page}`,
+    url: `/stcsp/order/admin/list/${category}/${page}`,
     method: 'POST',
     data:query
   })

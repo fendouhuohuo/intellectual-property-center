@@ -269,6 +269,7 @@ export default {
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 10px;
+  margin-left: 10px;
 
 }
 </style>

@@ -6,6 +6,7 @@
           <el-input placeholder="请输入订单名称" v-model="query.name">
             <el-button
               slot="append"
+              type="primary"
               icon="el-icon-search"
               @click="search()"
             ></el-button>
@@ -20,6 +21,7 @@
         element-loading-text="Loading"
         border
         highlight-current-row
+        style="margin-top: 15px"
       >
         <el-table-column type="index" />
         <el-table-column
@@ -141,7 +143,7 @@ export default {
   },
   methods: {
     fetchData() {
-      getOrder(this.page, this.query).then((response) => {
+      getOrder(1,this.page, this.query).then((response) => { //表示知识产权中心
         this.total = response.data.total;
         this.list = response.data.orderList;
       });

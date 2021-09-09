@@ -7,12 +7,12 @@
           <el-col :span="7">
             <div v-if="activeName == 'first'">
               <el-input v-model="query.name" placeholder="请输入需求名称">
-                <el-button slot="append" icon="el-icon-search" @click="SelectReq(query.name)" />
+                <el-button slot="append"  icon="el-icon-search" @click="SelectReq(query.name)"  />
               </el-input>
             </div>
             <div v-else>
               <el-input v-model="query.name" placeholder="请输入子需求名称">
-                <el-button slot="append" icon="el-icon-search" @click="SelectSubReq(query.name)" />
+                <el-button slot="append"   icon="el-icon-search" @click="SelectSubReq(query.name)" />
               </el-input>
             </div>
           </el-col>

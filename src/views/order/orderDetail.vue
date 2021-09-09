@@ -33,28 +33,22 @@
           </el-form-item>
         </el-col>
         <el-col :span="12">
-          <el-form-item label="卖家合同:">
-          <span style="font-size: 15px"> <el-button v-for="(item,index) in acceptanceUploadFleList" :key="index" type="text" class="btn" @click="pdfShow(item.fileUrl)"
-          >{{ item.fileName}}
-      </el-button></span>
-          </el-form-item>
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="12">
-          <el-form-item label="买家合同:">
-          <span style="font-size: 15px"> <el-button v-for="(item,index) in acceptanceUploadFleList" :key="index" type="text" class="btn" @click="pdfShow(item.fileUrl)"
-          >{{ item.fileName}}
-      </el-button></span>
-        </el-form-item>
-        </el-col>
-        <el-col :span="12">
           <el-form-item label="服务id:">
             <span >{{orderDetail.address}}</span>
           </el-form-item>
         </el-col>
       </el-row>
       <el-row>
+        <el-col :span="12">
+          <el-form-item label="价格:">
+            <span >{{orderDetail.price}}</span>
+          </el-form-item>
+        </el-col>
+        <el-col :span="12">
+          <el-form-item label="买家步骤:">
+            <span >{{orderDetail.buyerStep}}</span>
+          </el-form-item>
+        </el-col>
         <el-col :span="12">
           <el-form-item label="创建时间:">
             <span style="font-size: 15px">{{orderDetail.createTime}}</span>
@@ -63,25 +57,6 @@
         <el-col :span="12">
           <el-form-item label="更新时间:">
             <span style="font-size: 15px">{{orderDetail.updateTime}}</span>
-          </el-form-item>
-        </el-col>
-        <el-col :span="12">
-          <el-form-item label="价格:">
-            <span >{{orderDetail.price}}</span>
-          </el-form-item>
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="12">
-          <el-form-item label="附件:">
-          <span style="font-size: 15px"> <el-button v-for="(item,index) in acceptanceUploadFleList" :key="index" type="text" class="btn" @click="pdfShow(item.fileUrl)"
-          >{{ item.fileName}}
-      </el-button></span>
-          </el-form-item>
-        </el-col>
-        <el-col :span="12">
-          <el-form-item label="买家步骤:">
-            <span >{{orderDetail.buyerStep}}</span>
           </el-form-item>
         </el-col>
       </el-row>
